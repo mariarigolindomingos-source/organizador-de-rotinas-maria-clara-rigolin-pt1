@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARI'S ROUTINE</title>
+    <!-- Fonte Magnética / Y2K Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Elementos Decorativos 3D / Brilhos e Estrelas Flutuantes de Fundo -->
+    <div class="bg-decorations">
+        <!-- Estrela 4 pontas -->
+        <svg class="floating-shape star-4 s1" viewBox="0 0 100 100">
+            <path d="M50 0 C50 35 65 50 100 50 C65 50 50 65 50 100 C50 65 35 50 0 50 C35 50 50 35 50 0 Z" fill="url(#pinkGlow)"/>
+            <defs>
+                <radialGradient id="pinkGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffb7d5" />
+                    <stop offset="100%" stop-color="#ff2a8d" />
+                </radialGradient>
+            </defs>
+        </svg>
+
+        <!-- Estrela 8 pontas -->
+        <svg class="floating-shape star-8 s2" viewBox="0 0 100 100">
+            <path d="M50 0 L60 35 L95 20 L70 50 L95 80 L60 65 L50 100 L40 65 L5 80 L30 50 L5 20 L40 35 Z" fill="#ffccd5" opacity="0.8"/>
+        </svg>
+
+        <!-- Coração 3D -->
+        <svg class="floating-shape heart h1" viewBox="0 0 100 100">
+            <path d="M50 88.9L42.7 82.3C17 59 0 43.6 0 24.5C0 8.8 12.3 0 27.5 0C36.1 0 44.4 4 50 10.3C55.6 4 63.9 0 72.5 0C87.7 0 100 8.8 100 24.5C100 43.6 83 59 57.3 82.4L50 88.9Z" fill="url(#heartGlow)"/>
+            <defs>
+                <linearGradient id="heartGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ff9ebb"/>
+                    <stop offset="100%" stop-color="#d6006e"/>
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <!-- Brilho Sparkle -->
+        <svg class="floating-shape sparkle sp1" viewBox="0 0 100 100">
+            <path d="M50 0 L53 47 L100 50 L53 53 L50 100 L47 53 L0 50 L47 47 Z" fill="#ffffff"/>
+        </svg>
+        
+        <svg class="floating-shape star-4 s3" viewBox="0 0 100 100">
+            <path d="M50 0 C50 35 65 50 100 50 C65 50 50 65 50 100 C50 65 35 50 0 50 C35 50 50 35 50 0 Z" fill="#ffe0ec"/>
+        </svg>
+    </div>
+
+    <!-- Container Principal -->
+    <main class="container">
+
+        <!-- Cabeçalho Principal -->
+        <header class="header">
+            <div class="title-badge">✨ MY DAILY PLANNER ✨</div>
+            <h1 class="magnetic-title">MARI'S ROUTINE</h1>
+            <p class="subtitle">Dicas de organização, hábitos & equilíbrio para o dia a dia</p>
+        </header>
+
+        <!-- Grade de Cards -->
+        <section class="cards-grid">
+
+            <!-- Card 1: Estudos -->
+            <article class="card">
+                <div class="card-icon">📚</div>
+                <span class="card-tag">Foco & Aprendizado</span>
+                <h2 class="card-title">Estudos</h2>
+                <ul class="card-list">
+                    <li><strong>Técnica Pomodoro:</strong> 25 min de foco total + 5 min de descanso.</li>
+                    <li><strong>Método de Estudo Ativo:</strong> Faça resumos com suas próprias palavras e mapas mentais.</li>
+                    <li><strong>Revisão Espaçada:</strong> Revise o conteúdo estudado em 24h, 7 dias e 30 dias.</li>
+                    <li><strong>Ambiente Limpo:</strong> Mantenha a mesa livre de distrações e o celular distante.</li>
+                </ul>
+            </article>
+
+            <!-- Card 2: Trabalho -->
+            <article class="card">
+                <div class="card-icon">💻</div>
+                <span class="card-tag">Produtividade</span>
+                <h2 class="card-title">Trabalho</h2>
+                <ul class="card-list">
+                    <li><strong>Regra das 3 Prioridades:</strong> Defina no início do dia as 3 tarefas mais importantes.</li>
+                    <li><strong>Blocos de Tempo (Time Blocking):</strong> Reserve horários fixos para responder e-mails.</li>
+                    <li><strong>Organização Digital:</strong> Mantenha a área de trabalho limpa e pastas organizadas.</li>
+                    <li><strong>Pausas Estratégicas:</strong> Levante-se a cada hora para se alongar e beber água.</li>
+                </ul>
+            </article>
+
+            <!-- Card 3: Hobbies -->
+            <article class="card">
+                <div class="card-icon">🎨</div>
+                <span class="card-tag">Criatividade & Lazer</span>
+                <h2 class="card-title">Hobbies</h2>
+                <ul class="card-list">
+                    <li><strong>Tempo sem Telas:</strong> Dedique 30 minutos diários a hobbies offline (leitura, pintura, etc).</li>
+                    <li><strong>Espaço de Criação:</strong> Deixe seus materiais sempre acessíveis para praticar com facilidade.</li>
+                    <li><strong>Aprender Algo Novo:</strong> Escolha um novo projeto criativo a cada mês.</li>
+                    <li><strong>Sem Pressão:</strong> Lembre-se de que hobbies servem para relaxar, não para produzir.</li>
+                </ul>
+            </article>
+
+            <!-- Card 4: Esportes -->
+            <article class="card">
+                <div class="card-icon">🏋️‍♀️</div>
+                <span class="card-tag">Movimento & Energia</span>
+                <h2 class="card-title">Esportes</h2>
+                <ul class="card-list">
+                    <li><strong>Consistência > Intensidade:</strong> Mais vale 20 minutos diários do que 2h uma vez na semana.</li>
+                    <li><strong>Roupas Prontas:</strong> Deixe a roupa de treino separada na noite anterior.</li>
+                    <li><strong>Variedade de Treinos:</strong> Intercale musculação, pilates, corrida ou dança.</li>
+                    <li><strong>Acompanhamento:</strong> Anote sua evolução semanal para se manter motivada.</li>
+                </ul>
+            </article>
+
+            <!-- Card 5: Saúde & Bem-Estar -->
+            <article class="card">
+                <div class="card-icon">🧘‍♀️</div>
+                <span class="card-tag">Autocuidado</span>
+                <h2 class="card-title">Saúde</h2>
+                <ul class="card-list">
+                    <li><strong>Meta de Hidratação:</strong> Beba pelo menos 2 litros de água ao longo do dia.</li>
+                    <li><strong>Higiene do Sono:</strong> Desconecte-se de telas 1 hora antes de dormir.</li>
+                    <li><strong>Alimentação Consciente:</strong> Evite comer em frente ao computador ou TV.</li>
+                    <li><strong>Check-ups Regulares:</strong> Mantenha seus exames e consultas preventivas em dia.</li>
+                </ul>
+            </article>
+
+            <!-- Card 6: Organização Pessoal -->
+            <article class="card">
+                <div class="card-icon">🎀</div>
+                <span class="card-tag">Gestão de Vida</span>
+                <h2 class="card-title">Rotina Diária</h2>
+                <ul class="card-list">
+                    <li><strong>Reset Noturno:</strong> Arrume a casa por 15 minutos antes de ir para a cama.</li>
+                    <li><strong>Planejamento Semanal:</strong> Organize os compromissos no domingo à noite.</li>
+                    <li><strong>Diário de Gratidão:</strong> Escreva 3 coisas boas que aconteceram no seu dia.</li>
+                    <li><strong>Flexibilidade:</strong> Adapte a rotina quando imprevistos acontecerem sem culpa.</li>
+                </ul>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>

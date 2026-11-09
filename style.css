@@ -1,0 +1,253 @@
+/* =========================================================
+   MARI'S ROUTINE - ESTILOS GERAIS & TEMA DEGRADÊ PRETO E ROSA
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: radial-gradient(circle at 50% 20%, #2a081a 0%, #0d0208 50%, #030005 100%);
+    background-attachment: fixed;
+    color: #fce7f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* =========================================================
+   ELEMENTOS 3D E OBJETOS FLUTUANTES (FUNDO)
+   ========================================================= */
+
+.bg-decorations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-shape {
+    position: absolute;
+    filter: drop-shadow(0 0 12px rgba(255, 105, 180, 0.6));
+    animation: float 6s ease-in-out infinite alternate;
+}
+
+.star-4.s1 {
+    width: 60px;
+    top: 10%;
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.star-8.s2 {
+    width: 80px;
+    top: 70%;
+    right: 8%;
+    animation-delay: 1.5s;
+    filter: drop-shadow(0 0 18px rgba(255, 182, 193, 0.8));
+}
+
+.heart.h1 {
+    width: 70px;
+    top: 20%;
+    right: 12%;
+    animation-delay: 0.8s;
+    transform: rotate(-15deg);
+}
+
+.sparkle.sp1 {
+    width: 40px;
+    bottom: 15%;
+    left: 12%;
+    animation-delay: 2s;
+    filter: drop-shadow(0 0 10px #ffffff);
+}
+
+.star-4.s3 {
+    width: 45px;
+    top: 50%;
+    left: 4%;
+    animation-delay: 2.5s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg) scale(1);
+    }
+    100% {
+        transform: translateY(-25px) rotate(12deg) scale(1.08);
+    }
+}
+
+/* =========================================================
+   ESTRUTURA & CABEÇALHO
+   ========================================================= */
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    background: rgba(255, 105, 180, 0.15);
+    border: 1px solid rgba(255, 182, 193, 0.4);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ffb6c1;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    backdrop-filter: blur(5px);
+}
+
+/* Título estilo ILLIT - Magnetic / Super Real Me */
+.magnetic-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4.8rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #ffffff 20%, #ff80bf 60%, #ff1493 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(255, 20, 147, 0.5);
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #cca3b7;
+    font-weight: 400;
+}
+
+/* =========================================================
+   GRID DE CARDS COM EFEITO MODAL / DESTAQUE (HOVER)
+   ========================================================= */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: rgba(26, 10, 20, 0.65);
+    border: 1px solid rgba(255, 182, 193, 0.18);
+    border-radius: 24px;
+    padding: 30px;
+    backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff9ebb, #ff1493);
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.card-tag {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ff80bf;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.card-list {
+    list-style: none;
+}
+
+.card-list li {
+    font-size: 0.95rem;
+    color: #e6c2d4;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.card-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: #ff69b4;
+    font-size: 0.8rem;
+}
+
+.card-list li strong {
+    color: #fff;
+}
+
+/* --- EFEITO MODAL EM HOVER --- */
+.cards-grid:hover > .card:not(:hover) {
+    opacity: 0.45;
+    filter: blur(2px) scale(0.97);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.04);
+    background: rgba(45, 15, 35, 0.85);
+    border-color: rgba(255, 105, 180, 0.7);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 
+                0 0 30px rgba(255, 20, 147, 0.4);
+    z-index: 10;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .magnetic-title {
+        font-size: 2.8rem;
+    }
+}
